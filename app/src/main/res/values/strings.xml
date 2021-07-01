@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">ShoeStore</string>
+    <string name="app_name">The Shoe Store</string>
+    <string name="welcome_text">Shop now for high quality skate shoes and streetwear inspired trainers from a wide range of skateboarding footwear brands, including Adidas, Converse, Emerica, eS, HUF, Lakai, New Balance, Nike SB and Vans.\n\nBrowse through a broad selection of styles including slim and simple pumps, rubber toe capped classics or padded technical skate shoes. There are flexible vulcanised soles for added board feel and extra grip, or thicker cup soled shoes with support in the heel for impact absorption.\n\nWhether your looking for the support of a high top, the manoeuvrability of a low or something in the middle, there will be a sneaker that meets your needs. Constructed from premium materials such as smooth leathers, hardy suedes, tough canvas and durable synthetics, skate footwear is built to last. Created with function and comfort in mind, nothing else will feel better on your foot.</string>
+    <string name="instructions_text">Instructions to use:\n\nSelect one shoe and see the details on details button.</string>
+    <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="instructions">Instructions</string>
+    <string name="shoe_list">Shoe List</string>
+    <string name="shoe_detail">Shoe Detail</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company">Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="company_label">Company: %1$s</string>
+    <string name="size_label">Size: %1$s</string>
+    <string name="required_field_error">Field is required</string>
 </resources>
