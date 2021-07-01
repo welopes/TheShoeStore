@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">The Shoe Store</string>
+    <string name="app_name">ShoeStore</string>
+    <string name="app_title">The Shoe Store</string>
     <string name="welcome_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Vestibulum eu mi lacus. Pellentesque id lobortis dui.
         Vestibulum magna sapien, semper nec condimentum nec, ultrices et massa.
