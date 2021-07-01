@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/shoe_name"
                 android:inputType="textCapWords"
+                android:maxLength="13"
                 android:singleLine="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -54,8 +55,9 @@
                 android:id="@+id/et_company"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textCapWords"
                 android:hint="@string/company"
+                android:inputType="textCapWords"
+                android:maxLength="13"
                 android:singleLine="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -75,8 +77,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/shoe_size"
-                android:maxLength="4"
                 android:inputType="numberDecimal"
+                android:maxLength="4"
                 android:singleLine="true" />
 
         </com.google.android.material.textfield.TextInputLayout>

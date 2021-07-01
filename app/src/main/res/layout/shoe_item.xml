@@ -21,6 +21,7 @@
             android:padding="16dp">
 
             <ImageView
+                android:contentDescription="@string/shoe_image"
                 android:id="@+id/imageView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -34,7 +35,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:textSize="32sp"
+                android:textSize="20sp"
                 card_view:layout_constraintBottom_toTopOf="@+id/tv_company"
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintStart_toEndOf="@+id/imageView"
@@ -72,7 +73,7 @@
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintStart_toStartOf="@+id/tv_name"
                 card_view:layout_constraintTop_toBottomOf="@+id/tv_size"
-                tools:text="NONONONO NONONONO NONONONO " />
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
