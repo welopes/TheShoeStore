@@ -11,11 +11,11 @@
         Phasellus mollis sodales libero a tristique.</string>
     <string name="instructions_text">Instructions to use:\n\nSelect one shoe and see the details on details button.</string>
     <string name="logout">Logout</string>
-    <string name="login">Login</string>
-    <string name="welcome">Welcome</string>
-    <string name="instructions">Instructions</string>
-    <string name="shoe_list">Shoe List</string>
-    <string name="shoe_detail">Shoe Detail</string>
+    <string name="login">LOGIN</string>
+    <string name="welcome">WELCOME</string>
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="shoe_list">SHOE LIST</string>
+    <string name="shoe_detail">SHOE DETAIL</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
     <string name="shoe_name">Shoe Name</string>
@@ -26,4 +26,10 @@
     <string name="size_label">Size: %1$s</string>
     <string name="required_field_error">Field is required</string>
     <string name="shoe_image">Shoe image</string>
+    <string name="welcome_title">Welcome</string>
+    <string name="shoe_detail_title">Shoe Detail</string>
+    <string name="instructions_title">Instructions</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="create_login">Create login</string>
 </resources>

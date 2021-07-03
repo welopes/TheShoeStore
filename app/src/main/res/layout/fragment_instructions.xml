@@ -15,7 +15,7 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
-            android:text="@string/instructions"
+            android:text="@string/instructions_title"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
