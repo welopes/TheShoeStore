@@ -4,9 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
-import kotlinx.android.synthetic.main.fragment_shoe_detail.view.*
-import timber.log.Timber
-import kotlin.random.Random
 
 class ShoeViewModel : ViewModel() {
 
