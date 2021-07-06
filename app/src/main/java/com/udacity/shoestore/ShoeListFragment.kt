@@ -2,19 +2,15 @@ package com.udacity.shoestore
 
 import android.os.Bundle
 import android.view.*
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.models.Shoe
 
-class ShoeListFragment : Fragment() {
+class ShoeListFragment : Fragment(), ShoeListClickListener {
 
     private val viewModel: ShoeViewModel by activityViewModels()
 
@@ -25,13 +21,16 @@ class ShoeListFragment : Fragment() {
         var binding = FragmentShoeListBinding.inflate(inflater, container, false)
 
         binding.fabDetail.setOnClickListener {
+            viewModel.saveInit()
             findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
         }
 
         viewModel.shoes.observe(viewLifecycleOwner, { shoes ->
-            binding.recyclerView.adapter = ShoeListAdapter(shoes.toList())
+            binding.recyclerView.adapter = ShoeListAdapter( shoes.toList(), this)
         })
+
         setHasOptionsMenu(true)
+
         return binding.root
     }
 
@@ -43,5 +42,10 @@ class ShoeListFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
+    }
+
+    override fun onViewItemClick(shoe: Shoe) {
+        viewModel.updateInit(shoe)
+        findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
     }
 }

@@ -1,42 +1,48 @@
 package com.udacity.shoestore
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.udacity.shoestore.databinding.ShoeItemBinding
 import com.udacity.shoestore.models.Shoe
-import kotlinx.android.synthetic.main.shoe_item.view.*
 
-class ShoeListAdapter(private var dataSet: List<Shoe>) :
+class ShoeListAdapter(
+    private val shoes: List<Shoe>,
+    private val listener: ShoeListClickListener
+) :
     RecyclerView.Adapter<ShoeListAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val name: TextView = itemView.tv_name
-        val company: TextView = itemView.tv_company
-        val size: TextView = itemView.tv_size
-        val description: TextView = itemView.tv_description
-    }
+    class ViewHolder(val binding: ShoeItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view: View = LayoutInflater.from(parent.context)
-            .inflate(R.layout.shoe_item, parent, false)
+        val binding: ShoeItemBinding = ShoeItemBinding.inflate(
+            LayoutInflater.from(parent.context), parent, false
+        )
 
-        return ViewHolder(view)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val context = holder.itemView.context
 
-        holder.apply {
-            name.text = dataSet[position].name
-            company.text = context.getString(R.string.company_label, dataSet[position].company)
-            size.text =context.getString(R.string.size_label,  dataSet[position].size.toString())
-            description.text = dataSet[position].description
+        holder.binding.apply {
+            val shoe = shoes[position]
+
+            tvName.text = shoe.name
+            tvCompany.text = context.getString(R.string.company_label, shoe.company)
+            tvSize.text = context.getString(R.string.size_label, shoe.size.toString())
+            tvDescription.text = shoe.description
+
+            root.setOnClickListener {
+                listener.onViewItemClick(shoe)
+            }
+
+            executePendingBindings()
         }
     }
 
     override fun getItemCount(): Int {
-        return dataSet.size
+        return shoes.size
     }
 }
