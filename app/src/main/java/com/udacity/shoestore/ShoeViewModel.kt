@@ -19,28 +19,14 @@ class ShoeViewModel : ViewModel() {
     val isSaved: LiveData<Boolean>
         get() = _isSaved
 
-    private val _isUpdate = MutableLiveData(false)
-    val isUpdate: LiveData<Boolean>
-        get() = _isUpdate
-
-    fun saveOrUpdateShoe() {
-        if (_isUpdate.value!!.not()) {
-            _shoes.value?.add(_shoe.value!!)
-        }
-
+    fun saveShoe() {
+        _shoes.value?.add(_shoe.value!!)
         _shoe.value = null
         _isSaved.value = true
     }
 
-    fun updateInit(shoe: Shoe) {
-        _isSaved.value = false
-        _isUpdate.value = true
-        _shoe.value = shoe
-    }
-
     fun saveInit() {
         _isSaved.value = false
-        _isUpdate.value = false
         _shoe.value = Shoe("", 0.0, "", "")
     }
 
