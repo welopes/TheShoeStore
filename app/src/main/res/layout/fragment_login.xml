@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".LoginFragment">
 
-    <!-- It is preferable to use ConstraintLayout for more complex layout compositions -->
+    <!-- I used ConstraintLayout here because in a LinearLayout case I will need another LinearLayout to have buttons side by side -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ShoeListFragment">
 
-    <!-- It is preferable to use ConstraintLayout for more complex layout compositions -->
+    <!-- I used ConstraintLayout here because I need to put the list matched in entire screen and put the floating button above in the right bottom corner  -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,6 +19,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <!-- This is a Linearlayout to add a list of shoes programmatically -->
             <LinearLayout
                 android:id="@+id/ll_shoes"
                 android:layout_width="match_parent"

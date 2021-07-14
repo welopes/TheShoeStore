@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
-    <!-- I used LinearLayout because   -->
+    <!-- I used LinearLayout because I don't need to align views with others and put the toolbar and on top and fragment above LinearLayout is enough  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

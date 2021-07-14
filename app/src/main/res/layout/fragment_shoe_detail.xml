@@ -11,7 +11,7 @@
             type="com.udacity.shoestore.ShoeViewModel" />
     </data>
 
-    <!-- It is preferable to use ConstraintLayout for more complex layout compositions -->
+    <!-- I used ConstraintLayout here because it is simpler and performatic than create multiples LinearLayouts to nest the views -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
