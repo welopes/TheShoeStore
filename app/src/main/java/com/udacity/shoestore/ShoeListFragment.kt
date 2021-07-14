@@ -12,6 +12,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.databinding.ItemShoeBinding
 import com.udacity.shoestore.models.Shoe
 
 class ShoeListFragment : Fragment() {
@@ -56,38 +57,13 @@ class ShoeListFragment : Fragment() {
     }
 
     private fun addView(shoe: Shoe) {
-        val params = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
+        val shoeItemBinding = ItemShoeBinding.inflate(
+            layoutInflater,
+            null,
+            false
         )
-
-        var llShoe = LinearLayout(context)
-        llShoe.orientation = LinearLayout.VERTICAL
-        llShoe.layoutParams = params
-        llShoe.setPadding(32)
-
-        val tvName = TextView(context)
-        tvName.text = shoe.name
-        tvName.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24F)
-        tvName.layoutParams = params
-        llShoe.addView(tvName)
-
-        val tvCompany = TextView(context)
-        tvCompany.text = getString(R.string.company_label, shoe.company)
-        tvCompany.layoutParams = params
-        llShoe.addView(tvCompany)
-
-        val tvSize = TextView(context)
-        tvSize.text = getString(R.string.size_label, shoe.size.toString())
-        tvSize.layoutParams = params
-        llShoe.addView(tvSize)
-
-        val tvDescription = TextView(context)
-        tvDescription.text = shoe.description
-        tvDescription.layoutParams = params
-        llShoe.addView(tvDescription)
-
-        binding.llShoes.addView(llShoe)
+        shoeItemBinding.shoe = shoe
+        binding.llShoes.addView(shoeItemBinding.root)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
